@@ -1,9 +1,12 @@
 import React from 'react'
+import CommingSoon from './CommingSoon'
 
 const Todo = () => {
   return (
-    <div>Todo</div>
-  )
+<>
+<CommingSoon/>
+</>
+    )
 }
 
 export default Todo

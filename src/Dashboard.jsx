@@ -6,12 +6,12 @@ import { getData } from './data'
 import Header from './Header'
 const Dashboard = () => {
     return (
-        <div className='row d-flex flex-row' style={{justifyContent:'space-evenly', minHeight:'10vh'}} >
+        <div className='row d-flex flex-row' style={{justifyContent:'space-evenly',}} >
             <div className='col-md-3'>
                 <Sidebar />
 
             </div>
-            <div className='col-md-9'>
+            <div className='col-md-9' >
                 <Header/>
                 <Outlet />
 

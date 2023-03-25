@@ -1,10 +1,14 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import "./Sidebar.css"
 const Sidebar = () => {
     // get the pathname of the current page
     const currentPath = window.location.pathname;
     console.log('currentPath',currentPath)
+    const params=useParams();
+const userId=localStorage.getItem('id')
+console.log('userId',userId)
+
 const navigate=useNavigate();
     return (
         <div
@@ -13,12 +17,14 @@ const navigate=useNavigate();
         >
             <ul className="nav flex-column">
                 <li className="nav-item">
-                    <div className={`nav-link border-bottom  border-secondary ${currentPath === '/Dashboard/profile' ? 'text-white active' : 'text-muted'}`} onClick={()=>navigate('profile')} >
+                    <div className={`nav-link border-bottom  border-secondary ${currentPath === `/Dashboard/profile/${userId}` ? 'text-white active' : 'text-muted'}`} onClick={()=>{navigate(`profile/${userId}`)
+                window.location.reload()
+                }} >
                         Profile
                     </div>
                 </li>
                 <li className="nav-item">
-                    <div className={`nav-link border-bottom  border-secondary ${currentPath === '/Dashboard/post' ? 'text-white active' : 'text-muted'}`} onClick={()=>navigate('posts')} >
+                    <div className={`nav-link border-bottom  border-secondary ${currentPath === '/Dashboard/posts' ? 'text-white active' : 'text-muted'}`} onClick={()=>navigate('posts')} >
                         Post
                     </div>
                 </li>

@@ -1,9 +1,11 @@
 import React from 'react'
+import CommingSoon from './CommingSoon'
 
 const Posts = () => {
   return (
-    <div>Posts</div>
-  )
+<>
+<CommingSoon/>
+</>  )
 }
 
 export default Posts

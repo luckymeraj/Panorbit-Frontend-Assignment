@@ -83,9 +83,8 @@ useEffect(() => {
     <Route element={<Private />} >
 
       <Route path='Dashboard' element={<Dashboard/>}>
-        {/* <Route index element={<Header/>}/> */}
         
-        <Route index path='profile' element={<Profile/>}/>
+        <Route path='profile/:id' index element={<Profile/>}/>
         <Route path='posts' element={<Posts/>}/>
         <Route path='gallery' element={<Gallery/>}/>
         <Route path='todo' element={<Todo/>}/>

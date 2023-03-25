@@ -2,6 +2,7 @@ import React from 'react'
 import LandingPageCard from './LandingPageCard';
 
 const LandingPage = () => {
+
   const users = [
     {
       username: 'Lennae Graham',
@@ -246,7 +247,7 @@ const LandingPage = () => {
   ];
   return (
     <div style={{margin:0,padding:0}}>
-          <LandingPageCard users={users} />
+          <LandingPageCard/>
 
     </div>
     

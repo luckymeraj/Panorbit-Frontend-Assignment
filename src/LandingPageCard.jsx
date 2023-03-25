@@ -1,17 +1,28 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import './LandingPageCard.css'
-const LandingPageCard = ({ users }) => {
+const LandingPageCard = () => {
+    const navigate=useNavigate()
+    const users=JSON.parse(localStorage.getItem('data'))
+    console.log('nav',users[0])
+    
     return (
         <div id="wrapper">
-            <img src={`https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg`} alt="" className='bg-image' />
+            {/* <img src={``} alt="" className='bg-image' /> */}
             <div className="container">
                 <div className='card'>
                     <h1 className='card-header'>Select an account</h1>
 
                     {users.map((user, index) => (
-                        <div className="user" key={index}>
-                            <img src={user.image} alt={user.name} />
-                            <h3>{user.username}</h3>
+                        <div className="user" key={index}
+                        onClick={()=>{
+                            console.log('hellooo',)
+                            navigate(`Dashboard/profile/${user?.id}`);
+                        localStorage.setItem('id',user?.id);
+                    }}
+                        >
+                            <img src={user?.profilepicture} alt={user.name} />
+                            <h3>{user?.name}</h3>
                         </div>
                     ))}
                 </div>
