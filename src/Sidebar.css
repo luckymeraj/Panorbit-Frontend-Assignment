@@ -1,0 +1,39 @@
+.nav-link.active {
+    position: relative;
+}
+
+.nav-link.active::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    /* adjust the value to position the circle and arrow correctly */
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50% 0 0 50%;
+    /* set the border radius to create the corner */
+    border-left: none;
+    /* remove the left border to create the open end */
+    z-index: 1;
+    /* move the circle above the arrow */
+}
+
+.nav-link.active::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    /* adjust the value to position the arrow correctly */
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-right: 10px solid white;
+    border-bottom: 10px solid transparent;
+    z-index: 2;
+    /* move the arrow below the circle */
+}
