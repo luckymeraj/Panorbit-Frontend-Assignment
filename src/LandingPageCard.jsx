@@ -4,7 +4,7 @@ import './LandingPageCard.css'
 const LandingPageCard = () => {
     const navigate=useNavigate()
     const users=JSON.parse(localStorage.getItem('data'))
-    console.log('nav',users[0])
+    // console.log('nav',users[0])
     
     return (
         <div id="wrapper">
@@ -13,7 +13,7 @@ const LandingPageCard = () => {
                 <div className='card'>
                     <h1 className='card-header'>Select an account</h1>
 
-                    {users.map((user, index) => (
+                    {users && users.map((user, index) => (
                         <div className="user" key={index}
                         onClick={()=>{
                             console.log('hellooo',)

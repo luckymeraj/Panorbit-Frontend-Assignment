@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import './Header.css'
 const Header = ({ imageName, name }) => {
     const currentPath = window.location.pathname.split('/');
     console.log('currentPathmkehehej',currentPath[currentPath.length-2])
@@ -60,7 +60,8 @@ const Header = ({ imageName, name }) => {
         <div style={{textAlign:'center'}} onClick={
             ()=>{
                 localStorage.setItem('id',item?.id)
-                window.location.reload()
+                // window.location.reload()
+                navigate(`profile/${item?.id}`)
 
             }
         }>

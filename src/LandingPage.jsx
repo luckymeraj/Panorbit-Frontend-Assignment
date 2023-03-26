@@ -1,6 +1,7 @@
 import React from 'react'
 import LandingPageCard from './LandingPageCard';
-
+import Bg from './asset/landingBg.png'
+import './LandingPage.css'
 const LandingPage = () => {
 
   const users = [
@@ -245,8 +246,9 @@ const LandingPage = () => {
       image: 'UserImg',
     },
   ];
+  // 'url(./asset/landingBg.png)'
   return (
-    <div style={{margin:0,padding:0}}>
+    <div className='xyz' style={{backgroundRepeat:'no-repeat'}}>
           <LandingPageCard/>
 
     </div>
