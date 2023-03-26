@@ -1,9 +1,8 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
-import Sidebar from './Sidebar'
+import Sidebar from '../components/Sidebar'
 import './Dashboard.css'
-import { getData } from './data'
-import Header from './Header'
+import Header from '../components/Header'
 const Dashboard = () => {
     return (
         <div className='row d-flex flex-row' style={{justifyContent:'space-evenly',}} >

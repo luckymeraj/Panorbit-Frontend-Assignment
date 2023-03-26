@@ -4,15 +4,12 @@ import './LandingPageCard.css'
 const LandingPageCard = () => {
     const navigate=useNavigate()
     const users=JSON.parse(localStorage.getItem('data'))
-    // console.log('nav',users[0])
     
     return (
         <div id="wrapper">
-            {/* <img src={``} alt="" className='bg-image' /> */}
-            <div className="container">
                 <div className='card'>
-                    <h1 className='card-header'>Select an account</h1>
-
+                <h1 className='card-header'>Select an account</h1>
+<div className='card-list'>
                     {users && users.map((user, index) => (
                         <div className="user" key={index}
                         onClick={()=>{
@@ -21,12 +18,12 @@ const LandingPageCard = () => {
                         localStorage.setItem('id',user?.id);
                     }}
                         >
-                            <img src={user?.profilepicture} alt={user.name} />
-                            <h3>{user?.name}</h3>
+                            <img src={user?.profilepicture} alt={user.name}/>
+                            <h4>{user?.name}</h4>
                         </div>
                     ))}
+                    </div>
                 </div>
-            </div>
         </div>
     );
 };

@@ -24,22 +24,22 @@
 
 // export default App;
 import './App.css'
-import Header from './Header'
+import Header from './components/Header'
 
-import Sidebar from './Sidebar'
+import Sidebar from './components/Sidebar'
 import {
   BrowserRouter as Router,
   Route, BrowserRouter, Routes
 } from "react-router-dom";
-import Dashboard from './Dashboard';
-import Private from './Private';
-import LandingPage from './LandingPage';
+import Dashboard from './pages/Dashboard';
+import Private from './pages/Private';
+import LandingPage from './pages/LandingPage';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import Profile from './Profile';
-import Posts from './Posts';
-import Gallery from './Gallery';
-import Todo from './Todo';
+import Profile from './pages/Profile';
+import Posts from './pages/Posts';
+import Gallery from './pages/Gallery';
+import Todo from './pages/Todo';
 function App() {
 const[data,setData]=useState([]);
 const url='https://panorbit.in/api/users.json'
@@ -61,21 +61,7 @@ useEffect(() => {
 
 
   return (
-    // <div className="App">
-    //   <div className="container-fluid">
-    //     <div className="row">
-    //       <div className="col-md-3">
-    //         <Sidebar />
-    //       </div>
-    //       <div className="col-md-9">
-    //         <Header
-    //         // imageName={imageName}
-    //         //   name={name}
-    //         />
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
+    
     <div >
     <BrowserRouter>
     <Routes>

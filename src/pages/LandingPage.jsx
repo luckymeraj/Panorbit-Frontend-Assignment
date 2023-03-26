@@ -1,6 +1,5 @@
 import React from 'react'
-import LandingPageCard from './LandingPageCard';
-import Bg from './asset/landingBg.png'
+import LandingPageCard from '../components/LandingPageCard';
 import './LandingPage.css'
 const LandingPage = () => {
 
@@ -248,7 +247,7 @@ const LandingPage = () => {
   ];
   // 'url(./asset/landingBg.png)'
   return (
-    <div className='xyz' style={{backgroundRepeat:'no-repeat'}}>
+    <div className='xyz'>
           <LandingPageCard/>
 
     </div>

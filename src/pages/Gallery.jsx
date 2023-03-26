@@ -1,5 +1,5 @@
 import React from 'react'
-import CommingSoon from './CommingSoon'
+import CommingSoon from '../components/CommingSoon'
 
 const Gallery = () => {
   return (
