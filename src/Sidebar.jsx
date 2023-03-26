@@ -22,28 +22,28 @@ const navigate=useNavigate();
             className="p- d-flex flex-column justify-content-center"
             style={{ margin: '1em', backgroundColor: '#645CBB', borderRadius: '2.5em',width:'80%', height: '100vh' }}
         >
-            <ul className="nav flex-column">
+            <ul className="nav flex-column" style={{cursor:'pointer'}}>
                 <li className="nav-item">
-                    <div className={`nav-link border-bottom   ${currentPath === `/Dashboard/profile/${userId}` ? 'text-white fw-bold active' : 'text-muted'}`} onClick={()=>{navigate(`profile/${userId}`)
+                    <div className={`nav-link border-bottom   ${currentPath === `/Dashboard/profile/${userId}` ? 'text-white fw-bold active' : 'text-white-50'}`} onClick={()=>{navigate(`profile/${userId}`)
                 window.location.reload()
                 }} >
                         Profile
                     </div>
                 </li>
                 <li className="nav-item">
-                    <div className={`nav-link border-bottom   ${currentPath === '/Dashboard/posts' ? 'text-white active' : 'text-muted'}`} onClick={()=>navigate('posts')} >
+                    <div className={`nav-link border-bottom   ${currentPath === '/Dashboard/posts' ? 'text-white fw-bold active' : 'text-white-50'}`} onClick={()=>navigate('posts')} >
                         Post
                     </div>
                 </li>
                 <li className="nav-item">
-                    <div className={`nav-link border-bottom  ${currentPath === '/Dashboard/gallery' ? 'text-white active' : 'text-muted'}`} 
+                    <div className={`nav-link border-bottom  ${currentPath === '/Dashboard/gallery' ? 'text-white fw-bold active' : 'text-white-50'}`} 
                     onClick={()=>navigate('gallery')}
                     >
                         Gallery
                     </div>
                 </li>
                 <li className="nav-item">
-                    <div className={`nav-link  ${currentPath === '/Dashboard/todo' ? 'text-white active' : 'text-muted'}`} 
+                    <div className={`nav-link  ${currentPath === '/Dashboard/todo' ? 'text-white fw-bold active' : 'text-white-50'}`} 
                     onClick={()=>navigate('todo')}
                     
                     >
