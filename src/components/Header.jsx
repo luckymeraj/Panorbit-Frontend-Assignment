@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './Header.css'
 const Header = ({ imageName, name }) => {
     const currentPath = window.location.pathname.split('/');
-    console.log('currentPathmkehehej', currentPath[currentPath.length - 2])
+    // console.log('currentPathmkehehej', currentPath[currentPath.length - 2])
     const title = currentPath[currentPath.length - 1]
     const navigate = useNavigate();
     const [singleData, setSingleData] = useState([])
@@ -12,7 +12,7 @@ const Header = ({ imageName, name }) => {
     useEffect(() => {
 
         const oneData = usersData?.filter((item) => (item?.id == `${userId}`))
-        console.log('singleData345', oneData[0].name)
+        // console.log('singleData345', oneData[0].name)
         setSingleData(oneData[0])
 
     }, [userId])

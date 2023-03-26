@@ -45,7 +45,7 @@ const[data,setData]=useState([]);
 const url='https://panorbit.in/api/users.json'
 useEffect(() => {
   axios.get(url).then((res) => {
-      console.log("table data", res?.data?.users);
+      // console.log("table data", res?.data?.users);
       localStorage.setItem('data',JSON.stringify(res?.data?.users))
       // console.log('json',localStorage.getItem('data'))
       

@@ -16,7 +16,7 @@ const Profile = () => {
      }
     const singleData = usersData?.filter((item) => (item?.id == `${items}`))
     setUserProfile(singleData[0])
-    console.log('profile',userProfile)
+    // console.log('profile',userProfile)
 }, [userId])
 
     return (

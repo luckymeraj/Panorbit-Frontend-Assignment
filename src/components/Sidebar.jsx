@@ -4,10 +4,10 @@ import "./Sidebar.css"
 const Sidebar = () => {
     // get the pathname of the current page
     const currentPath = window.location.pathname;
-    console.log('currentPath', currentPath)
+    // console.log('currentPath', currentPath)
     const params = useParams();
     const userId = localStorage.getItem('id')
-    console.log('currentPathuserId', userId)
+    // console.log('currentPathuserId', userId)
     const [item, setItem] = useState([]);
     useEffect(() => {
         const items = localStorage.getItem('id');

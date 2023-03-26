@@ -13,7 +13,7 @@ const LandingPageCard = () => {
                     {users && users.map((user, index) => (
                         <div className="user" key={index}
                         onClick={()=>{
-                            console.log('hellooo',)
+                            // console.log('hellooo',)
                             navigate(`Dashboard/profile/${user?.id}`);
                         localStorage.setItem('id',user?.id);
                     }}
