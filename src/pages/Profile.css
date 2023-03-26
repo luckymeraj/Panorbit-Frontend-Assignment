@@ -34,7 +34,7 @@
 .profile-sec-1 h5,
 .profile-sec-2 h5,
 .profile-add-detail h5 {
-    font-size: 18px;
+    font-size: 15px;
     color: rgb(67, 66, 64);
 }
 
@@ -83,7 +83,8 @@
     height: 300px;
     display: flex;
     flex-direction: column;
-    align-items: center
+    align-items: center;
+    justify-content: space-between;
 }
 
 .profile-add-map img {

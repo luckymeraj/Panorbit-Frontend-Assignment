@@ -31,9 +31,9 @@ const Header = ({ imageName, name }) => {
                 </h1>
             </div>
             <div className="d-flex align-items-center ">
-                <div class="dropdown">
+                <div className="dropdown">
 
-                    <button class="dropdown-toggle nav-drop-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                    <button className="dropdown-toggle nav-drop-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
                         <img
                             src={singleData?.profilepicture}
                             alt="Profile Image"
@@ -42,14 +42,14 @@ const Header = ({ imageName, name }) => {
                         <h2 className="h5 mb-0">{singleData?.name}</h2>
 
                     </button>
-                    <ul class="dropdown-menu" >
+                    <ul className="dropdown-menu" >
                         <img src={singleData?.profilepicture} />
                         <h6>{singleData?.name}</h6>
                         <h6>{singleData?.email}</h6>
 
 
                         {usersData && usersData.map((item, index) => (
-                            <li>
+                            <li key={index}>
                                 <div onClick={
                                     () => {
                                         localStorage.setItem('id', item?.id)
@@ -65,7 +65,7 @@ const Header = ({ imageName, name }) => {
                         ))
 
                         }
-                        <button type="button" class="btn signoutBt" onClick={signOutFun}>Sign out</button>
+                        <button type="button" className="btn signoutBt" onClick={signOutFun}>Sign out</button>
 
 
                     </ul>
