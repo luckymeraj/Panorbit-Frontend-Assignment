@@ -11,7 +11,7 @@ const Dashboard = () => {
                 <Sidebar />
 
             </div>
-            <div className='col-md-8 p-0' style={{display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'space-evenly'}} >
+            <div className='col-md-8 p-0' >
                 <Header/>
                 <Outlet />
                 <Chat/>

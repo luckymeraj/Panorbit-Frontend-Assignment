@@ -45,6 +45,7 @@
     gap: 20px;
     padding: 20px;
     border-top: 1px solid lightgray;
+    cursor: pointer;
   }
   
   .user img {
